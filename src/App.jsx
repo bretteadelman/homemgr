@@ -358,12 +358,12 @@ function HeroSection({ onOpenFamily, onOpenCoordinator }) {
 
             {/* Neighborhoods */}
             <div className="fade-in-up delay-400" style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', gap: 6 }}>
-              <span style={{ fontSize: 11, color: 'rgba(179,183,170,0.45)', textTransform: 'uppercase', letterSpacing: '0.08em' }}>
+              <span style={{ fontSize: 11, color: 'rgba(28,40,25,0.45)', textTransform: 'uppercase', letterSpacing: '0.08em' }}>
                 Trusted by families in
               </span>
               {hoods.map((n, i) => (
-                <span key={n} style={{ fontSize: 12, color: 'rgba(179,183,170,0.6)' }}>
-                  {n}{i < hoods.length - 1 && <span style={{ color: 'rgba(179,183,170,0.25)', marginLeft: 6 }}>·</span>}
+                <span key={n} style={{ fontSize: 12, color: 'rgba(28,40,25,0.6)' }}>
+                  {n}{i < hoods.length - 1 && <span style={{ color: 'rgba(28,40,25,0.25)', marginLeft: 6 }}>·</span>}
                 </span>
               ))}
             </div>
@@ -471,7 +471,7 @@ function HowItWorksSection() {
                 background: 'rgba(174,124,74,0.1)', border: '1px solid rgba(174,124,74,0.25)',
                 display: 'flex', alignItems: 'center', justifyContent: 'center', color: S.amber,
               }}>{p.icon}</div>
-              <div style={{ fontSize: 10, letterSpacing: '0.13em', textTransform: 'uppercase', color: 'rgba(179,183,170,0.45)', marginBottom: 10, fontWeight: 500 }}>{p.label}</div>
+              <div style={{ fontSize: 10, letterSpacing: '0.13em', textTransform: 'uppercase', color: 'rgba(28,40,25,0.4)', marginBottom: 10, fontWeight: 500 }}>{p.label}</div>
               <h3 style={{ ...S.serif, fontSize: 26, fontWeight: 600, color: S.text, margin: '0 0 14px', lineHeight: 1.2 }}>{p.title}</h3>
               <p style={{ fontSize: 15, lineHeight: 1.72, color: S.muted, margin: 0 }}>{p.body}</p>
             </div>
@@ -507,7 +507,7 @@ function PricingSection() {
                 <span style={{ ...S.serif, fontSize: 58, fontWeight: 600, color: S.text, lineHeight: 1 }}>$99</span>
                 <span style={{ fontSize: 16, color: S.muted }}>/month</span>
               </div>
-              <p style={{ fontSize: 14, color: 'rgba(179,183,170,0.55)', margin: 0 }}>Billed monthly. Cancel anytime.</p>
+              <p style={{ fontSize: 14, color: 'rgba(28,40,25,0.45)', margin: 0 }}>Billed monthly. Cancel anytime.</p>
             </div>
             <div style={{ height: 1, background: S.cardBorder, marginBottom: 28 }} />
             <ul style={{ listStyle: 'none', padding: 0, margin: '0 0 36px', display: 'flex', flexDirection: 'column', gap: 14 }}>
@@ -563,8 +563,8 @@ function PricingSection() {
         </div>
 
         <div className="reveal" style={{ textAlign: 'center' }}>
-          <p style={{ fontSize: 14, color: 'rgba(179,183,170,0.45)', margin: 0 }}>
-            <span style={{ color: S.sage }}>Coordinators join for free.</span> Helm is free to apply and free to match — coordinators pay nothing.
+          <p style={{ fontSize: 14, color: 'rgba(28,40,25,0.55)', margin: 0 }}>
+            <span style={{ color: S.sage, fontWeight: 500 }}>Coordinators join for free.</span> Helm is free to apply and free to match — coordinators pay nothing.
           </p>
         </div>
       </div>
@@ -663,10 +663,10 @@ function ForCoordinatorsSection({ onOpenCoordinator }) {
             {/* Left: text — sits on lighter part of gradient */}
             <div className="reveal">
               <div style={{ fontSize: 11, letterSpacing: '0.14em', textTransform: 'uppercase', color: S.forest, marginBottom: 20, fontWeight: 500 }}>For Coordinators</div>
-              <h2 style={{ ...S.serif, fontSize: 'clamp(36px,5vw,52px)', fontWeight: 600, lineHeight: 1.1, margin: '0 0 20px', color: S.text }}>
+              <h2 style={{ ...S.serif, fontSize: 'clamp(36px,5vw,52px)', fontWeight: 600, lineHeight: 1.1, margin: '0 0 20px', color: '#1C2819' }}>
                 Build a career,<br />not a gig.
               </h2>
-              <p style={{ fontSize: 16, lineHeight: 1.72, color: S.muted, margin: '0 0 36px', maxWidth: 480 }}>
+              <p style={{ fontSize: 16, lineHeight: 1.72, color: '#4A5C46', margin: '0 0 36px', maxWidth: 480 }}>
                 Helm connects experienced household coordinators with LA families who value them. Consistent hours, fair pay, and households that are set up for a real working relationship.
               </p>
               <button onClick={onOpenCoordinator} style={{

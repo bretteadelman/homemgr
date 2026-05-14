@@ -77,13 +77,13 @@ function SingleSelect({ options, value, onChange }) {
             padding: '14px 20px', borderRadius: 10, textAlign: 'left',
             border: `1px solid ${sel ? ACCENT : BORDER}`,
             background: sel ? `rgba(196,113,58,0.1)` : 'transparent',
-            color: sel ? CREAM : 'rgba(250,248,244,0.75)',
+            color: sel ? CREAM : 'rgba(28,40,25,0.75)',
             fontSize: 15, cursor: 'pointer', transition: 'all 0.18s',
             display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 12,
             ...sans,
           }}
             onMouseEnter={e => { if (!sel) { e.currentTarget.style.borderColor = 'rgba(196,113,58,0.4)'; e.currentTarget.style.color = CREAM } }}
-            onMouseLeave={e => { if (!sel) { e.currentTarget.style.borderColor = BORDER; e.currentTarget.style.color = 'rgba(250,248,244,0.75)' } }}
+            onMouseLeave={e => { if (!sel) { e.currentTarget.style.borderColor = BORDER; e.currentTarget.style.color = 'rgba(28,40,25,0.75)' } }}
           >
             <span>{opt}</span>
             {sel && <span style={{ color: ACCENT }}><Check size={16} /></span>}
@@ -113,7 +113,7 @@ function MultiSelect({ options, value = [], onChange, maxSelect }) {
             padding: '10px 18px', borderRadius: 100,
             border: `1px solid ${sel ? ACCENT : BORDER}`,
             background: sel ? `rgba(196,113,58,0.12)` : 'transparent',
-            color: sel ? CREAM : atMax ? 'rgba(250,248,244,0.3)' : 'rgba(250,248,244,0.75)',
+            color: sel ? CREAM : atMax ? 'rgba(28,40,25,0.3)' : 'rgba(28,40,25,0.75)',
             fontSize: 14, cursor: atMax ? 'not-allowed' : 'pointer', transition: 'all 0.18s',
             display: 'flex', alignItems: 'center', gap: 6, ...sans,
           }}>
@@ -136,7 +136,7 @@ function StepContent({ step, formData, updateField }) {
           <h3 style={{ ...serif, fontSize: 28, fontWeight: 600, color: CREAM, margin: '0 0 8px', lineHeight: 1.2 }}>
             Which LA neighborhood are you in?
           </h3>
-          <p style={{ fontSize: 14, color: 'rgba(250,248,244,0.5)', margin: '0 0 28px' }}>We match based on your location.</p>
+          <p style={{ fontSize: 14, color: 'rgba(28,40,25,0.5)', margin: '0 0 28px' }}>We match based on your location.</p>
           <SingleSelect options={NEIGHBORHOODS} value={formData.neighborhood} onChange={v => updateField('neighborhood', v)} />
         </>
       )
@@ -146,7 +146,7 @@ function StepContent({ step, formData, updateField }) {
           <h3 style={{ ...serif, fontSize: 28, fontWeight: 600, color: CREAM, margin: '0 0 8px', lineHeight: 1.2 }}>
             Tell us about your household.
           </h3>
-          <p style={{ fontSize: 14, color: 'rgba(250,248,244,0.5)', margin: '0 0 28px' }}>Select all that apply.</p>
+          <p style={{ fontSize: 14, color: 'rgba(28,40,25,0.5)', margin: '0 0 28px' }}>Select all that apply.</p>
           <MultiSelect options={HOUSEHOLD_OPTIONS} value={formData.household} onChange={v => updateField('household', v)} />
         </>
       )
@@ -156,7 +156,7 @@ function StepContent({ step, formData, updateField }) {
           <h3 style={{ ...serif, fontSize: 28, fontWeight: 600, color: CREAM, margin: '0 0 8px', lineHeight: 1.2 }}>
             What's your home situation?
           </h3>
-          <p style={{ fontSize: 14, color: 'rgba(250,248,244,0.5)', margin: '0 0 28px' }}>Select the best description.</p>
+          <p style={{ fontSize: 14, color: 'rgba(28,40,25,0.5)', margin: '0 0 28px' }}>Select the best description.</p>
           <SingleSelect options={HOME_SIZES} value={formData.homeSize} onChange={v => updateField('homeSize', v)} />
         </>
       )
@@ -166,7 +166,7 @@ function StepContent({ step, formData, updateField }) {
           <h3 style={{ ...serif, fontSize: 28, fontWeight: 600, color: CREAM, margin: '0 0 8px', lineHeight: 1.2 }}>
             What's driving you to find a coordinator?
           </h3>
-          <p style={{ fontSize: 14, color: 'rgba(250,248,244,0.5)', margin: '0 0 28px' }}>Select your top 2.</p>
+          <p style={{ fontSize: 14, color: 'rgba(28,40,25,0.5)', margin: '0 0 28px' }}>Select your top 2.</p>
           <MultiSelect options={PAIN_POINTS} value={formData.painPoints} onChange={v => updateField('painPoints', v)} maxSelect={2} />
         </>
       )
@@ -176,7 +176,7 @@ function StepContent({ step, formData, updateField }) {
           <h3 style={{ ...serif, fontSize: 28, fontWeight: 600, color: CREAM, margin: '0 0 8px', lineHeight: 1.2 }}>
             How many hours per week do you think you need?
           </h3>
-          <p style={{ fontSize: 14, color: 'rgba(250,248,244,0.5)', margin: '0 0 28px' }}>You can always refine this with us.</p>
+          <p style={{ fontSize: 14, color: 'rgba(28,40,25,0.5)', margin: '0 0 28px' }}>You can always refine this with us.</p>
           <SingleSelect options={HOURS_OPTIONS} value={formData.hours} onChange={v => updateField('hours', v)} />
         </>
       )
@@ -186,7 +186,7 @@ function StepContent({ step, formData, updateField }) {
           <h3 style={{ ...serif, fontSize: 28, fontWeight: 600, color: CREAM, margin: '0 0 8px', lineHeight: 1.2 }}>
             What's your expected monthly coordinator budget?
           </h3>
-          <p style={{ fontSize: 14, color: 'rgba(250,248,244,0.5)', margin: '0 0 28px' }}>Separate from the Helm subscription.</p>
+          <p style={{ fontSize: 14, color: 'rgba(28,40,25,0.5)', margin: '0 0 28px' }}>Separate from the Helm subscription.</p>
           <SingleSelect options={BUDGET_OPTIONS} value={formData.budget} onChange={v => updateField('budget', v)} />
         </>
       )
@@ -196,7 +196,7 @@ function StepContent({ step, formData, updateField }) {
           <h3 style={{ ...serif, fontSize: 28, fontWeight: 600, color: CREAM, margin: '0 0 8px', lineHeight: 1.2 }}>
             When are you looking to have someone in place?
           </h3>
-          <p style={{ fontSize: 14, color: 'rgba(250,248,244,0.5)', margin: '0 0 28px' }}>No pressure either way.</p>
+          <p style={{ fontSize: 14, color: 'rgba(28,40,25,0.5)', margin: '0 0 28px' }}>No pressure either way.</p>
           <SingleSelect options={TIMELINE_OPTIONS} value={formData.timeline} onChange={v => updateField('timeline', v)} />
         </>
       )
@@ -206,34 +206,34 @@ function StepContent({ step, formData, updateField }) {
           <h3 style={{ ...serif, fontSize: 28, fontWeight: 600, color: CREAM, margin: '0 0 8px', lineHeight: 1.2 }}>
             Last step — how should we reach you?
           </h3>
-          <p style={{ fontSize: 14, color: 'rgba(250,248,244,0.5)', margin: '0 0 28px' }}>We'll be in touch within 2 business days.</p>
+          <p style={{ fontSize: 14, color: 'rgba(28,40,25,0.5)', margin: '0 0 28px' }}>We'll be in touch within 2 business days.</p>
           <div style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
             <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 12 }}>
               <div>
-                <label style={{ display: 'block', fontSize: 12, color: 'rgba(250,248,244,0.5)', marginBottom: 6, letterSpacing: '0.05em', textTransform: 'uppercase' }}>First name *</label>
+                <label style={{ display: 'block', fontSize: 12, color: 'rgba(28,40,25,0.5)', marginBottom: 6, letterSpacing: '0.05em', textTransform: 'uppercase' }}>First name *</label>
                 <input value={formData.firstName || ''} onChange={e => updateField('firstName', e.target.value)}
                   placeholder="Jane" aria-label="First name" style={inputStyle} />
               </div>
               <div>
-                <label style={{ display: 'block', fontSize: 12, color: 'rgba(250,248,244,0.5)', marginBottom: 6, letterSpacing: '0.05em', textTransform: 'uppercase' }}>Last name *</label>
+                <label style={{ display: 'block', fontSize: 12, color: 'rgba(28,40,25,0.5)', marginBottom: 6, letterSpacing: '0.05em', textTransform: 'uppercase' }}>Last name *</label>
                 <input value={formData.lastName || ''} onChange={e => updateField('lastName', e.target.value)}
                   placeholder="Smith" aria-label="Last name" style={inputStyle} />
               </div>
             </div>
             <div>
-              <label style={{ display: 'block', fontSize: 12, color: 'rgba(250,248,244,0.5)', marginBottom: 6, letterSpacing: '0.05em', textTransform: 'uppercase' }}>Email *</label>
+              <label style={{ display: 'block', fontSize: 12, color: 'rgba(28,40,25,0.5)', marginBottom: 6, letterSpacing: '0.05em', textTransform: 'uppercase' }}>Email *</label>
               <input type="email" value={formData.email || ''} onChange={e => updateField('email', e.target.value)}
                 placeholder="jane@example.com" aria-label="Email" style={inputStyle} />
             </div>
             <div>
-              <label style={{ display: 'block', fontSize: 12, color: 'rgba(250,248,244,0.5)', marginBottom: 6, letterSpacing: '0.05em', textTransform: 'uppercase' }}>Phone (optional)</label>
+              <label style={{ display: 'block', fontSize: 12, color: 'rgba(28,40,25,0.5)', marginBottom: 6, letterSpacing: '0.05em', textTransform: 'uppercase' }}>Phone (optional)</label>
               <input type="tel" value={formData.phone || ''} onChange={e => updateField('phone', e.target.value)}
                 placeholder="(310) 555-0100" aria-label="Phone" style={inputStyle} />
             </div>
             <label style={{ display: 'flex', alignItems: 'flex-start', gap: 12, cursor: 'pointer', marginTop: 4 }}>
               <input type="checkbox" checked={!!formData.agreed} onChange={e => updateField('agreed', e.target.checked)}
                 style={{ marginTop: 3, accentColor: ACCENT, width: 16, height: 16, flexShrink: 0 }} />
-              <span style={{ fontSize: 13, color: 'rgba(250,248,244,0.55)', lineHeight: 1.55 }}>
+              <span style={{ fontSize: 13, color: 'rgba(28,40,25,0.5)', lineHeight: 1.55 }}>
                 I understand that home coordinators placed through Helm will be my direct W-2 employees, and that the $99/month Helm subscription begins when I'm matched.
               </span>
             </label>
@@ -319,7 +319,7 @@ export default function FamilyIntakeModal({ onClose }) {
             <h3 style={{ ...serif, fontSize: 34, fontWeight: 600, color: CREAM, margin: '0 0 16px' }}>
               You're on your way.
             </h3>
-            <p style={{ fontSize: 16, color: 'rgba(250,248,244,0.62)', lineHeight: 1.65, margin: '0 0 36px', maxWidth: 400 }}>
+            <p style={{ fontSize: 16, color: 'rgba(28,40,25,0.6)', lineHeight: 1.65, margin: '0 0 36px', maxWidth: 400 }}>
               We'll be in touch within 2 business days with your coordinator introduction.
             </p>
             <button onClick={onClose} style={{
@@ -332,21 +332,21 @@ export default function FamilyIntakeModal({ onClose }) {
             {/* Header */}
             <div style={{ padding: '24px 28px 0', flexShrink: 0 }}>
               <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 20 }}>
-                <div style={{ fontSize: 12, color: 'rgba(250,248,244,0.4)', letterSpacing: '0.05em', ...sans }}>
+                <div style={{ fontSize: 12, color: 'rgba(28,40,25,0.4)', letterSpacing: '0.05em', ...sans }}>
                   Step {step + 1} of {TOTAL_STEPS}
                 </div>
                 <button onClick={onClose} aria-label="Close" style={{
-                  background: 'rgba(255,255,255,0.06)', border: 'none', borderRadius: 8,
+                  background: 'rgba(28,40,25,0.06)', border: 'none', borderRadius: 8,
                   width: 32, height: 32, display: 'flex', alignItems: 'center', justifyContent: 'center',
-                  color: 'rgba(250,248,244,0.6)', cursor: 'pointer', transition: 'all 0.2s',
+                  color: 'rgba(28,40,25,0.6)', cursor: 'pointer', transition: 'all 0.2s',
                 }}
-                  onMouseEnter={e => { e.currentTarget.style.background = 'rgba(255,255,255,0.12)'; e.currentTarget.style.color = CREAM }}
-                  onMouseLeave={e => { e.currentTarget.style.background = 'rgba(255,255,255,0.06)'; e.currentTarget.style.color = 'rgba(250,248,244,0.6)' }}
+                  onMouseEnter={e => { e.currentTarget.style.background = 'rgba(28,40,25,0.08)'; e.currentTarget.style.color = CREAM }}
+                  onMouseLeave={e => { e.currentTarget.style.background = 'rgba(28,40,25,0.06)'; e.currentTarget.style.color = 'rgba(28,40,25,0.6)' }}
                 ><X size={16} /></button>
               </div>
 
               {/* Progress bar */}
-              <div style={{ height: 3, background: 'rgba(255,255,255,0.08)', borderRadius: 99, overflow: 'hidden' }}>
+              <div style={{ height: 3, background: 'rgba(28,40,25,0.07)', borderRadius: 99, overflow: 'hidden' }}>
                 <div className="progress-bar" style={{
                   height: '100%', borderRadius: 99, background: ACCENT,
                   width: `${progress}%`, transition: 'width 0.35s ease',
@@ -366,7 +366,7 @@ export default function FamilyIntakeModal({ onClose }) {
             }}>
               <button onClick={handleBack} style={{
                 padding: '12px 20px', background: 'transparent', border: `1px solid ${BORDER}`,
-                borderRadius: 8, color: step === 0 ? 'rgba(250,248,244,0.2)' : 'rgba(250,248,244,0.7)',
+                borderRadius: 8, color: step === 0 ? 'rgba(28,40,25,0.2)' : 'rgba(28,40,25,0.7)',
                 fontSize: 14, cursor: step === 0 ? 'default' : 'pointer', transition: 'all 0.2s',
                 display: 'flex', alignItems: 'center', gap: 6, ...sans,
               }}
